@@ -1,22 +1,103 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
-While running game code:
-  File "game/script.rpy", line 36, in script
-    Me "What's going on? Why do I see the Earth? Like the whole Earth? Is this space? How is"
-Exception: Sayer 'Me' is not defined.
+After initialization, but before game start.
+  File "game/screens.rpy", line 719, in prepare_screen
+    screen preferences():
+  File "game/screens.rpy", line 719, in prepare
+    screen preferences():
+  File "game/screens.rpy", line 723, in prepare
+    use game_menu(_("Preferences"), scroll="viewport"):
+  File "game/screens.rpy", line 723, in prepare
+    use game_menu(_("Preferences"), scroll="viewport"):
+  File "game/screens.rpy", line 725, in prepare
+    vbox:
+  File "game/screens.rpy", line 725, in prepare
+    vbox:
+  File "game/screens.rpy", line 757, in prepare
+    hbox:
+  File "game/screens.rpy", line 757, in prepare
+    hbox:
+  File "game/screens.rpy", line 771, in prepare
+    vbox:
+  File "game/screens.rpy", line 771, in prepare
+    vbox:
+  File "game/screens.rpy", line 779, in prepare
+    if config.has_sound:
+  File "game/screens.rpy", line 779, in prepare
+    if config.has_sound:
+  File "game/screens.rpy", line 783, in prepare
+    hbox:
+  File "game/screens.rpy", line 783, in prepare
+    hbox:
+  File "game/screens.rpy", line 786, in prepare
+    if config.sample_sound:
+  File "game/screens.rpy", line 786, in prepare
+    if config.sample_sound:
+  File "game/screens.rpy", line 787, in prepare
+    textbutton _("Test") action Play("sound", config.sample_sound)
+  File "game/screens.rpy", line 787, in prepare
+    textbutton _("Test") action Play("sound", config.sample_sound)
+AttributeError: 'StoreModule' object has no attribute '_history'
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/script.rpy", line 36, in script
-    Me "What's going on? Why do I see the Earth? Like the whole Earth? Is this space? How is"
-  File "C:\Users\John\Documents\My Stuff\renpy-7.3.5-sdk\renpy\ast.py", line 678, in execute
-    who = eval_who(self.who, self.who_fast)
-  File "C:\Users\John\Documents\My Stuff\renpy-7.3.5-sdk\renpy\ast.py", line 576, in eval_who
-    raise Exception("Sayer '%s' is not defined." % who.encode("utf-8"))
-Exception: Sayer 'Me' is not defined.
+  File "C:\Users\John\Documents\My Stuff\renpy-7.3.5-sdk\renpy\bootstrap.py", line 316, in bootstrap
+    renpy.main.main()
+  File "C:\Users\John\Documents\My Stuff\renpy-7.3.5-sdk\renpy\main.py", line 578, in main
+    run(restart)
+  File "C:\Users\John\Documents\My Stuff\renpy-7.3.5-sdk\renpy\main.py", line 94, in run
+    renpy.display.screen.prepare_screens()
+  File "C:\Users\John\Documents\My Stuff\renpy-7.3.5-sdk\renpy\display\screen.py", line 931, in prepare_screens
+    s.ast.prepare_screen()
+  File "game/screens.rpy", line 719, in prepare_screen
+    screen preferences():
+  File "game/screens.rpy", line 719, in prepare
+    screen preferences():
+  File "game/screens.rpy", line 723, in prepare
+    use game_menu(_("Preferences"), scroll="viewport"):
+  File "game/screens.rpy", line 723, in prepare
+    use game_menu(_("Preferences"), scroll="viewport"):
+  File "game/screens.rpy", line 725, in prepare
+    vbox:
+  File "game/screens.rpy", line 725, in prepare
+    vbox:
+  File "game/screens.rpy", line 757, in prepare
+    hbox:
+  File "game/screens.rpy", line 757, in prepare
+    hbox:
+  File "game/screens.rpy", line 771, in prepare
+    vbox:
+  File "game/screens.rpy", line 771, in prepare
+    vbox:
+  File "game/screens.rpy", line 779, in prepare
+    if config.has_sound:
+  File "game/screens.rpy", line 779, in prepare
+    if config.has_sound:
+  File "game/screens.rpy", line 783, in prepare
+    hbox:
+  File "game/screens.rpy", line 783, in prepare
+    hbox:
+  File "game/screens.rpy", line 786, in prepare
+    if config.sample_sound:
+  File "game/screens.rpy", line 786, in prepare
+    if config.sample_sound:
+  File "game/screens.rpy", line 787, in prepare
+    textbutton _("Test") action Play("sound", config.sample_sound)
+  File "game/screens.rpy", line 787, in prepare
+    textbutton _("Test") action Play("sound", config.sample_sound)
+  File "C:\Users\John\Documents\My Stuff\renpy-7.3.5-sdk\renpy\python.py", line 2052, in py_eval_bytecode
+    return eval(bytecode, globals, locals)
+  File "<screen language>", line 787, in <module>
+  File "C:\Users\John\Documents\My Stuff\renpy-7.3.5-sdk\renpy\character.py", line 1150, in __call__
+    self.do_done(who, what)
+  File "C:\Users\John\Documents\My Stuff\renpy-7.3.5-sdk\renpy\character.py", line 830, in do_done
+    self.add_history("adv", who, what, multiple=multiple)
+  File "C:\Users\John\Documents\My Stuff\renpy-7.3.5-sdk\renpy\character.py", line 1216, in add_history
+    if not renpy.store._history:  # @UndefinedVariable
+AttributeError: 'StoreModule' object has no attribute '_history'
 
 Windows-8-6.2.9200
 Ren'Py 7.3.5.606
 Bramblethorn 1.0
-Wed Apr 22 23:06:53 2020
+Wed Apr 22 23:48:42 2020
