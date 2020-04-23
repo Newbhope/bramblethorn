@@ -1,0 +1,22 @@
+﻿I'm sorry, but an uncaught exception occurred.
+
+While running game code:
+  File "game/script.rpy", line 36, in script
+    Me "What's going on? Why do I see the Earth? Like the whole Earth? Is this space? How is"
+Exception: Sayer 'Me' is not defined.
+
+-- Full Traceback ------------------------------------------------------------
+
+Full traceback:
+  File "game/script.rpy", line 36, in script
+    Me "What's going on? Why do I see the Earth? Like the whole Earth? Is this space? How is"
+  File "C:\Users\John\Documents\My Stuff\renpy-7.3.5-sdk\renpy\ast.py", line 678, in execute
+    who = eval_who(self.who, self.who_fast)
+  File "C:\Users\John\Documents\My Stuff\renpy-7.3.5-sdk\renpy\ast.py", line 576, in eval_who
+    raise Exception("Sayer '%s' is not defined." % who.encode("utf-8"))
+Exception: Sayer 'Me' is not defined.
+
+Windows-8-6.2.9200
+Ren'Py 7.3.5.606
+Bramblethorn 1.0
+Wed Apr 22 23:06:53 2020
